@@ -25,6 +25,18 @@ setup(name='vifaniyalviv.policy',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'collective.usernamelogger',
+          'iw.rotatezlogs',
+          'plone.app.caching',
+          'Products.Carousel',
+          'Products.PloneFormGen',
+          'Products.PloneGlossary',
+          'collective.embedly',
+          'quintagroup.dropdownmenu',
+          'quintagroup.plonecaptchas',
+          'quintagroup.seoptimizer',
+          'quintagroup.portlet.cumulus',
+          'beyondskins.responsive',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
@@ -33,6 +45,4 @@ setup(name='vifaniyalviv.policy',
       [z3c.autoinclude.plugin]
       target = plone
       """,
-      setup_requires=["PasteScript"],
-      paster_plugins=["ZopeSkel"],
       )
