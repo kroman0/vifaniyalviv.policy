@@ -6,7 +6,7 @@
     i18n_domain="vifaniyalviv.policy">
 
   <five:registerPackage package="." initialize=".initialize" />
-
+  <interface interface="cioppino.twothumbs.interfaces.ILoveThumbsDontYou" />
   <genericsetup:registerProfile
       name="default"
       title="vifaniyalviv.policy"

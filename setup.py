@@ -41,6 +41,10 @@ setup(name='vifaniyalviv.policy',
           'collective.quickupload',
           'Products.Ploneboard',
           'cioppino.twothumbs',
+          'collective.taghelper',
+          'Products.ContentWellPortlets',
+#          'collective.easyslider',
+#          'collective.prettyphoto',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
