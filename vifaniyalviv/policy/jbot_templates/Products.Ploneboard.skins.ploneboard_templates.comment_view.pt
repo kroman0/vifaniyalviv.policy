@@ -90,8 +90,6 @@
                          src="defaultUser.gif" 
                          alt="" 
                          border="0" 
-                         width="75" 
-                         height="100" 
                          tal:attributes="src portrait/absolute_url" />
                   </a>
                 </div>
