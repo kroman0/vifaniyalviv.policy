@@ -101,6 +101,8 @@ for k in REQUEST.keys():
     elif k in ('sort_on', 'sort_order', 'sort_limit'):
         if k == 'sort_limit' and not same_type(v, 0):
             query[k] = int(v)
+        elif k == 'sort_on' and not v in indexes:
+            pass
         else:
             query[k] = v
 
