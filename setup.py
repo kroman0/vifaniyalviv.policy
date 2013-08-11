@@ -46,6 +46,7 @@ setup(name='vifaniyalviv.policy',
 #          'collective.easyslider',
 #          'collective.prettyphoto',
           'krz.labjs',
+          'z3c.jbot',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
