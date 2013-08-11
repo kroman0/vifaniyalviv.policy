@@ -14,7 +14,16 @@
                                     templateId template/getId;
                                     toLocalizedTime nocall:context/@@plone/toLocalizedTime;">
 
-        <div class="eventDetails vcard">
+        <div class="eventDetails vcard vevent" itemscope itemtype="http://data-vocabulary.org/Event">
+    <ul class="hiddenStructure">
+      <li><a itemprop="url" class="url" tal:attributes="href context/absolute_url" tal:content="context/absolute_url">url</a></li>
+      <li class="name" tal:content="context/Title">title</li>
+      <li itemprop="summary" tal:content="context/Title">title</li>
+      <li itemprop="startDate" class="dtstart" tal:content="python:context.start().ISO8601()">end</li>
+      <li itemprop="endDate" class="dtend" tal:content="python:context.end().ISO8601()">end</li>
+      <li itemprop="description" class="description" tal:content="context/Description">description</li>
+      <li itemprop="location" tal:content="context/location">Location</li>
+    </ul>
             <table class="vertical listing"
                    summary="Event details" i18n:attributes="summary summary_event_details;">
 
