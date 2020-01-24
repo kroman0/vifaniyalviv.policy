@@ -36,7 +36,8 @@ are here:</span>
             </span>
             <span id="breadcrumbs-current"
                   tal:condition="is_last"
-                  tal:content="title">crumb</span>
+                  tal:content="title"
+                  itemprop="name">crumb</span>
          </tal:item>
     </span>
 
