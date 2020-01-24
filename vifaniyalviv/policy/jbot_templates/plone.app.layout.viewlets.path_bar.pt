@@ -1,7 +1,7 @@
 <div id="portal-breadcrumbs"
      i18n:domain="plone"
      itemscope
-     itemtype="http://data-vocabulary.org/Breadcrumb"
+     itemtype="http://schema.org/BreadcrumbList"
      tal:define="breadcrumbs view/breadcrumbs;
                  is_rtl view/is_rtl">
 
@@ -17,16 +17,18 @@ are here:</span>
     </span>
     <span tal:repeat="crumb breadcrumbs"
           tal:attributes="dir python:is_rtl and 'rtl' or 'ltr';
-                          id string:breadcrumbs-${repeat/crumb/number}">
+                          id string:breadcrumbs-${repeat/crumb/number}"
+          itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <meta property="position" tal:attributes="content repeat/crumb/number">
         <tal:item tal:define="is_last repeat/crumb/end;
                               url crumb/absolute_url;
                               title crumb/Title">
             <a href="#"
-               itemprop="url"
+               itemprop="item"
                tal:omit-tag="not: url"
                tal:condition="python:not is_last"
                tal:attributes="href url">
-               <span itemprop="title" tal:content="title">crumb</span>
+               <span itemprop="name" tal:content="title">crumb</span>
             </a>
             <span class="breadcrumbSeparator" tal:condition="not: is_last">
                 <tal:ltr condition="not: is_rtl">/</tal:ltr>
