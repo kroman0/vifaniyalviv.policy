@@ -19,7 +19,7 @@ are here:</span>
           tal:attributes="dir python:is_rtl and 'rtl' or 'ltr';
                           id string:breadcrumbs-${repeat/crumb/number}"
           itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-        <meta property="position" tal:attributes="content repeat/crumb/number">
+        <meta itemprop="position" tal:attributes="content repeat/crumb/number">
         <tal:item tal:define="is_last repeat/crumb/end;
                               url crumb/absolute_url;
                               title crumb/Title">
