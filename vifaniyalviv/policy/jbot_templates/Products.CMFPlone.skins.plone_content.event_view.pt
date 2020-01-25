@@ -17,11 +17,13 @@
         <div class="eventDetails vcard vevent" itemscope itemtype="http://schema.org/Event">
     <ul class="hiddenStructure">
       <li><a itemprop="url" class="url" tal:attributes="href context/absolute_url" tal:content="context/absolute_url">url</a></li>
-      <li class="name" itemprop="name" tal:content="context/Title">title</li>
+      <li class="summary" itemprop="name" tal:content="context/Title">title</li>
       <li itemprop="startDate" class="dtstart" tal:content="python:context.start().ISO8601()">end</li>
       <li itemprop="endDate" class="dtend" tal:content="python:context.end().ISO8601()">end</li>
       <li itemprop="description" class="description" tal:content="context/Description">description</li>
-      <li itemprop="location" itemtype="http://schema.org/Text" tal:content="context/location">Location</li>
+      <li itemprop="location" itemscope itemtype="http://schema.org/Place">
+        <span class="location" itemprop="address" tal:content="context/location">Location</span>
+      </li>
     </ul>
             <table class="vertical listing"
                    summary="Event details" i18n:attributes="summary summary_event_details;">
