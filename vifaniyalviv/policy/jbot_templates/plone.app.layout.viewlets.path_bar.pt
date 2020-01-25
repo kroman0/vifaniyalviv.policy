@@ -7,9 +7,13 @@
 
     <span id="breadcrumbs-you-are-here" i18n:translate="you_are_here">You
 are here:</span>
-    <span id="breadcrumbs-home">
-        <a i18n:translate="tabs_home"
-           tal:attributes="href view/navigation_root_url">Home</a>
+    <span id="breadcrumbs-home"
+          itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <meta itemprop="position" content="0" />
+        <a itemprop="item"
+           tal:attributes="href view/navigation_root_url">
+             <span i18n:translate="tabs_home" itemprop="name">Home</span>
+        </a>
         <span tal:condition="breadcrumbs" class="breadcrumbSeparator">
             <tal:ltr condition="not: is_rtl">/</tal:ltr>
             <tal:rtl condition="is_rtl">\</tal:rtl>
@@ -19,7 +23,7 @@ are here:</span>
           tal:attributes="dir python:is_rtl and 'rtl' or 'ltr';
                           id string:breadcrumbs-${repeat/crumb/number}"
           itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-        <meta itemprop="position" tal:attributes="content repeat/crumb/number">
+        <meta itemprop="position" tal:attributes="content repeat/crumb/number" />
         <tal:item tal:define="is_last repeat/crumb/end;
                               url crumb/absolute_url;
                               title crumb/Title">
