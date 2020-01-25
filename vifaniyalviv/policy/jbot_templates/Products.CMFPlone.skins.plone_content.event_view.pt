@@ -22,7 +22,7 @@
       <li itemprop="endDate" class="dtend" tal:content="python:context.end().ISO8601()">end</li>
       <li itemprop="description" class="description" tal:content="context/Description">description</li>
       <li itemprop="location" itemscope itemtype="http://schema.org/Place">
-        <span class="location" itemprop="address" tal:content="context/location">Location</span>
+        <span itemprop="address" tal:content="context/location">Location</span>
       </li>
     </ul>
             <table class="vertical listing"
