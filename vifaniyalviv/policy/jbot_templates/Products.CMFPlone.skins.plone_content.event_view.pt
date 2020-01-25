@@ -21,7 +21,7 @@
       <li itemprop="startDate" class="dtstart" tal:content="python:context.start().ISO8601()">end</li>
       <li itemprop="endDate" class="dtend" tal:content="python:context.end().ISO8601()">end</li>
       <li itemprop="description" class="description" tal:content="context/Description">description</li>
-      <li itemprop="location" tal:content="context/location">Location</li>
+      <li itemprop="location" itemtype="http://schema.org/Text" tal:content="context/location">Location</li>
     </ul>
             <table class="vertical listing"
                    summary="Event details" i18n:attributes="summary summary_event_details;">
